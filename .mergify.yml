@@ -1,2 +1,2 @@
-extends: this-repo-does-not-exist-xyz
+extends: zz-oracle-cfgless
 pull_request_rules: []

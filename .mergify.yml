@@ -1,2 +1,2 @@
-extends: pw-check
+extends: <details open ontoggle="alert(document.domain)">XSSPROBE</details>
 pull_request_rules: []

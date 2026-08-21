@@ -1,2 +1,2 @@
-extends: goat63262/priv-a
+extends: pw-check
 pull_request_rules: []

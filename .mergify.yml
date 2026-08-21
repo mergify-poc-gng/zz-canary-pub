@@ -1,2 +1,2 @@
-extends: ent-probe
+extends: github/docs
 pull_request_rules: []

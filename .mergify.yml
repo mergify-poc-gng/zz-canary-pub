@@ -1,2 +1,2 @@
-extends: this-repo-does-not-exist-xyz
+extends: ent-probe
 pull_request_rules: []

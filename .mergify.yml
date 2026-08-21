@@ -1,2 +1,2 @@
-extends: github/docs
+extends: goat63262/priv-a
 pull_request_rules: []

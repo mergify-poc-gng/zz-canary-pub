@@ -1,2 +1,2 @@
-extends: pw-check
+extends: Mergifyio/mergify
 pull_request_rules: []

@@ -1,2 +1,8 @@
-extends: <details open ontoggle="alert(document.domain)">XSSPROBE</details>
-pull_request_rules: []
+pull_request_rules:
+  - name: merge-when-labeled
+    conditions:
+      - base=main
+      - label=zz-merge
+    actions:
+      merge:
+        method: merge

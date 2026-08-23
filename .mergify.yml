@@ -1,10 +1,1 @@
-pull_request_rules:
-  - name: approve-as-other-user
-    conditions:
-      - base=main
-      - label=zz-approve
-    actions:
-      review:
-        type: APPROVE
-        message: "APPROVAL-PROBE-882"
-        bot_account: Gurnoor03
+pull_request_rules: []

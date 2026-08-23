@@ -1,8 +1,1 @@
-pull_request_rules:
-  - name: auto-merge-when-ci-passes
-    conditions:
-      - base=main
-      - check-success=analyze
-    actions:
-      merge:
-        method: merge
+pull_request_rules: []

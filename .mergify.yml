@@ -1,8 +1,6 @@
 pull_request_rules:
-  - name: merge-when-labeled
+  - name: broken
     conditions:
-      - base=main
-      - label=zz-merge
+      - !!! invalid !!!
     actions:
-      merge:
-        method: merge
+      nonexistent_action: {}

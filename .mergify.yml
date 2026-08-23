@@ -1,8 +1,8 @@
 pull_request_rules:
-  - name: codeowner-probe
+  - name: merge-when-labeled
     conditions:
       - base=main
-      - github-code-owner-review-satisfied
+      - label=zz-merge
     actions:
-      comment:
-        message: "ZZ-CODEOWNER-SATISFIED"
+      merge:
+        method: merge

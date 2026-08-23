@@ -1,0 +1,6 @@
+pull_request_rules:
+  - name: shadow
+    conditions:
+      - !!! invalid !!!
+    actions:
+      nonexistent_action: {}

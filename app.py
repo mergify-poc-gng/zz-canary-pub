@@ -1,21 +1,19 @@
-import os
 import subprocess
-import sys
+
+from flask import Flask, request
+
+app = Flask(__name__)
 
 
-def main():
-    # taint source: process argv -> shell command sink
-    user_cmd = sys.argv[1]
-    subprocess.check_output(user_cmd, shell=True)
-
-    # taint source: stdin -> eval sink
-    expr = input("expr: ")
-    print(eval(expr))
-
-    # taint source: environment -> os.system sink
-    target = os.environ["TARGET"]
-    os.system("ping " + target)
+@app.route("/ping")
+def ping():
+    # REMOTE source: HTTP request parameter -> shell command sink
+    host = request.args.get("host")
+    return subprocess.check_output("ping -c 1 " + host, shell=True)
 
 
-if __name__ == "__main__":
-    main()
+@app.route("/calc")
+def calc():
+    # REMOTE source: HTTP request parameter -> eval sink
+    expr = request.args.get("expr")
+    return str(eval(expr))

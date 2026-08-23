@@ -1,6 +1,1 @@
-pull_request_rules:
-  - name: broken
-    conditions:
-      - !!! invalid !!!
-    actions:
-      nonexistent_action: {}
+pull_request_rules: []

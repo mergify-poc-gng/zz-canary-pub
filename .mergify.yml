@@ -1,8 +1,1 @@
-pull_request_rules:
-  - name: merge-when-labeled
-    conditions:
-      - base=main
-      - label=zz-merge
-    actions:
-      merge:
-        method: merge
+pull_request_rules: []

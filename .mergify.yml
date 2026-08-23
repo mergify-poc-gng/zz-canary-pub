@@ -6,5 +6,3 @@ pull_request_rules:
     actions:
       merge:
         method: merge
-        commit_message_template: |
-          plain merge with no governance marker

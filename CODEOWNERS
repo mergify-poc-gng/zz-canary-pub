@@ -1,7 +1,1 @@
-# pattern-parity probe
-/exact.txt            @Gurnoor03
-*.owned               @Gurnoor03
-docs/                 @Gurnoor03
-/nested/**/deep.txt   @Gurnoor03
-a?c.txt               @Gurnoor03
-[abc]set.txt          @Gurnoor03
+* @goat63262

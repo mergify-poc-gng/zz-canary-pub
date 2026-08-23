@@ -1,7 +1,1 @@
-pull_request_rules:
-  - name: merge-on-base
-    conditions:
-      - base=main
-    actions:
-      merge:
-        method: merge
+pull_request_rules: []

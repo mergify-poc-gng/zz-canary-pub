@@ -1,8 +1,6 @@
 pull_request_rules:
-  - name: bot-approval-probe
+  - name: broken
     conditions:
-      - base=main
-      - "#approved-reviews-by>=1"
+      - !!! invalid !!!
     actions:
-      comment:
-        message: "BOTAPPROVAL-PROBE-553 mergify counted an approval"
+      nonexistent_action: {}

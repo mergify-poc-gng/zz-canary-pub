@@ -1,16 +1,21 @@
 import os
 import subprocess
+import sys
 
 
-def run(cmd):
-    return os.path.basename(cmd)
+def main():
+    # taint source: process argv -> shell command sink
+    user_cmd = sys.argv[1]
+    subprocess.check_output(user_cmd, shell=True)
+
+    # taint source: stdin -> eval sink
+    expr = input("expr: ")
+    print(eval(expr))
+
+    # taint source: environment -> os.system sink
+    target = os.environ["TARGET"]
+    os.system("ping " + target)
 
 
-def unsafe_exec(user_input):
-    # command injection: user input flows into a shell
-    return subprocess.check_output(user_input, shell=True)
-
-
-def unsafe_eval(user_input):
-    # code injection: user input flows into eval
-    return eval(user_input)
+if __name__ == "__main__":
+    main()
